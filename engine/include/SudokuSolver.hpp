@@ -11,6 +11,13 @@ public:
 
     SolverStats getStats() const;
 
+    bool isValid(
+        SudokuBoard& board,
+        int row,
+        int col,
+        int num
+    );
+
 private:
     SolverStats stats;
 
@@ -20,12 +27,7 @@ private:
         int& col
     );
 
-    bool isValid(
-        SudokuBoard& board,
-        int row,
-        int col,
-        int num
-    );
+
 };
 
 #endif

@@ -3,6 +3,7 @@ add_library(
 
     src/SudokuBoard.cpp
     src/SudokuSolver.cpp
+    src/SudokuGenerator.cpp
 )
 
 target_include_directories(

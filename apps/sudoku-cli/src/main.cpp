@@ -3,9 +3,14 @@
 
 #include "SudokuBoard.hpp"
 #include "SudokuSolver.hpp"
+#include "SudokuGenerator.hpp"
 
 int main(int argc, char* argv[])
 {
+
+    SudokuGenerator generator;
+
+    SudokuBoard board = generator.generate();
     if(argc < 2)
     {
         std::cout << "Usage: sudoku <puzzle.txt>\n";
@@ -14,7 +19,7 @@ int main(int argc, char* argv[])
 
     std::string filename = argv[1];
 
-    SudokuBoard board;
+    //SudokuBoard board;
 
     try
     {

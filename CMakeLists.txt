@@ -8,3 +8,4 @@ enable_testing()
 
 add_subdirectory(engine)
 add_subdirectory(apps/sudoku-cli)
+#add_subdirectory(apps/sudoku-api)
