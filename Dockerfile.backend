@@ -1,0 +1,17 @@
+# Build stage
+FROM alpine:3.18 AS builder
+RUN apk add --no-cache cmake make g++ asio-dev
+WORKDIR /app
+COPY . .
+# Configure and build the backend API (and the rest of the project)
+RUN cmake -B build -S . && cmake --build build --config Release
+
+# Run stage
+FROM alpine:3.18
+# Install libstdc++ which is required to run compiled C++ applications
+RUN apk add --no-cache libstdc++
+WORKDIR /app
+# Copy the compiled executable
+COPY --from=builder /app/build/apps/sudoku-api/sudoku_api .
+EXPOSE 8080
+CMD ["./sudoku_api"]

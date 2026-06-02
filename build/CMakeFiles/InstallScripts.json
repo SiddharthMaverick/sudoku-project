@@ -3,7 +3,8 @@
 	[
 		"C:/Users/siddh/sudoku-project/build/cmake_install.cmake",
 		"C:/Users/siddh/sudoku-project/build/engine/cmake_install.cmake",
-		"C:/Users/siddh/sudoku-project/build/apps/sudoku-cli/cmake_install.cmake"
+		"C:/Users/siddh/sudoku-project/build/apps/sudoku-cli/cmake_install.cmake",
+		"C:/Users/siddh/sudoku-project/build/apps/sudoku-api/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+
+.container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(9, 40px);
+    grid-template-rows: repeat(9, 40px);
+    gap: 2px;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: #333;
+    padding: 2px;
+    border-radius: 4px;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    outline: none;
+}
+
+.cell.read-only {
+    background-color: #eee;
+    color: #333;
+    font-weight: bold;
+}
+
+/* 3x3 grid styling */
+.cell:nth-child(3n) {
+    border-right: 2px solid #333;
+}
+.cell:nth-child(9n) {
+    border-right: none;
+}
+.board .cell:nth-child(n+19):nth-child(-n+27),
+.board .cell:nth-child(n+46):nth-child(-n+54) {
+    border-bottom: 2px solid #333;
+}
+
+.message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #d9534f;
+}

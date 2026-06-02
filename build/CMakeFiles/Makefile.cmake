@@ -40,6 +40,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/Windows.cmake"
   "C:/Program Files/CMake/share/cmake-4.3/Modules/Platform/WindowsPaths.cmake"
   "C:/Users/siddh/sudoku-project/CMakeLists.txt"
+  "C:/Users/siddh/sudoku-project/apps/sudoku-api/CMakeLists.txt"
   "C:/Users/siddh/sudoku-project/apps/sudoku-cli/CMakeLists.txt"
   "CMakeFiles/4.3.3/CMakeCCompiler.cmake"
   "CMakeFiles/4.3.3/CMakeCXXCompiler.cmake"
@@ -59,10 +60,12 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "engine/CMakeFiles/CMakeDirectoryInformation.cmake"
   "apps/sudoku-cli/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "apps/sudoku-api/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "engine/CMakeFiles/sudoku_engine.dir/DependInfo.cmake"
   "apps/sudoku-cli/CMakeFiles/sudoku.dir/DependInfo.cmake"
+  "apps/sudoku-api/CMakeFiles/sudoku_api.dir/DependInfo.cmake"
   )

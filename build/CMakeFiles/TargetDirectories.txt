@@ -9,3 +9,7 @@ C:/Users/siddh/sudoku-project/build/apps/sudoku-cli/CMakeFiles/sudoku.dir
 C:/Users/siddh/sudoku-project/build/apps/sudoku-cli/CMakeFiles/test.dir
 C:/Users/siddh/sudoku-project/build/apps/sudoku-cli/CMakeFiles/edit_cache.dir
 C:/Users/siddh/sudoku-project/build/apps/sudoku-cli/CMakeFiles/rebuild_cache.dir
+C:/Users/siddh/sudoku-project/build/apps/sudoku-api/CMakeFiles/sudoku_api.dir
+C:/Users/siddh/sudoku-project/build/apps/sudoku-api/CMakeFiles/test.dir
+C:/Users/siddh/sudoku-project/build/apps/sudoku-api/CMakeFiles/edit_cache.dir
+C:/Users/siddh/sudoku-project/build/apps/sudoku-api/CMakeFiles/rebuild_cache.dir

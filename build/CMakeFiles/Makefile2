@@ -64,22 +64,45 @@ CMAKE_BINARY_DIR = C:\Users\siddh\sudoku-project\build
 # The main recursive "all" target.
 all: engine/all
 all: apps/sudoku-cli/all
+all: apps/sudoku-api/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: engine/codegen
 codegen: apps/sudoku-cli/codegen
+codegen: apps/sudoku-api/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
 preinstall: engine/preinstall
 preinstall: apps/sudoku-cli/preinstall
+preinstall: apps/sudoku-api/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: engine/clean
 clean: apps/sudoku-cli/clean
+clean: apps/sudoku-api/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory apps/sudoku-api
+
+# Recursive "all" directory target.
+apps/sudoku-api/all: apps/sudoku-api/CMakeFiles/sudoku_api.dir/all
+.PHONY : apps/sudoku-api/all
+
+# Recursive "codegen" directory target.
+apps/sudoku-api/codegen: apps/sudoku-api/CMakeFiles/sudoku_api.dir/codegen
+.PHONY : apps/sudoku-api/codegen
+
+# Recursive "preinstall" directory target.
+apps/sudoku-api/preinstall:
+.PHONY : apps/sudoku-api/preinstall
+
+# Recursive "clean" directory target.
+apps/sudoku-api/clean: apps/sudoku-api/CMakeFiles/sudoku_api.dir/clean
+.PHONY : apps/sudoku-api/clean
 
 #=============================================================================
 # Directory level rules for directory apps/sudoku-cli
@@ -126,7 +149,7 @@ engine/clean: engine/CMakeFiles/sudoku_engine.dir/clean
 engine/CMakeFiles/sudoku_engine.dir/all:
 	$(MAKE) $(MAKESILENT) -f engine\CMakeFiles\sudoku_engine.dir\build.make engine/CMakeFiles/sudoku_engine.dir/depend
 	$(MAKE) $(MAKESILENT) -f engine\CMakeFiles\sudoku_engine.dir\build.make engine/CMakeFiles/sudoku_engine.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\siddh\sudoku-project\build\CMakeFiles --progress-num=3,4,5,6 "Built target sudoku_engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\siddh\sudoku-project\build\CMakeFiles --progress-num=5,6,7,8 "Built target sudoku_engine"
 .PHONY : engine/CMakeFiles/sudoku_engine.dir/all
 
 # Build rule for subdir invocation for target.
@@ -143,7 +166,7 @@ sudoku_engine: engine/CMakeFiles/sudoku_engine.dir/rule
 # codegen rule for target.
 engine/CMakeFiles/sudoku_engine.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f engine\CMakeFiles\sudoku_engine.dir\build.make engine/CMakeFiles/sudoku_engine.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\siddh\sudoku-project\build\CMakeFiles --progress-num=3,4,5,6 "Finished codegen for target sudoku_engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\siddh\sudoku-project\build\CMakeFiles --progress-num=5,6,7,8 "Finished codegen for target sudoku_engine"
 .PHONY : engine/CMakeFiles/sudoku_engine.dir/codegen
 
 # clean rule for target.
@@ -182,6 +205,38 @@ apps/sudoku-cli/CMakeFiles/sudoku.dir/codegen:
 apps/sudoku-cli/CMakeFiles/sudoku.dir/clean:
 	$(MAKE) $(MAKESILENT) -f apps\sudoku-cli\CMakeFiles\sudoku.dir\build.make apps/sudoku-cli/CMakeFiles/sudoku.dir/clean
 .PHONY : apps/sudoku-cli/CMakeFiles/sudoku.dir/clean
+
+#=============================================================================
+# Target rules for target apps/sudoku-api/CMakeFiles/sudoku_api.dir
+
+# All Build rule for target.
+apps/sudoku-api/CMakeFiles/sudoku_api.dir/all: engine/CMakeFiles/sudoku_engine.dir/all
+	$(MAKE) $(MAKESILENT) -f apps\sudoku-api\CMakeFiles\sudoku_api.dir\build.make apps/sudoku-api/CMakeFiles/sudoku_api.dir/depend
+	$(MAKE) $(MAKESILENT) -f apps\sudoku-api\CMakeFiles\sudoku_api.dir\build.make apps/sudoku-api/CMakeFiles/sudoku_api.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\siddh\sudoku-project\build\CMakeFiles --progress-num=3,4 "Built target sudoku_api"
+.PHONY : apps/sudoku-api/CMakeFiles/sudoku_api.dir/all
+
+# Build rule for subdir invocation for target.
+apps/sudoku-api/CMakeFiles/sudoku_api.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\siddh\sudoku-project\build\CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 apps/sudoku-api/CMakeFiles/sudoku_api.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\siddh\sudoku-project\build\CMakeFiles 0
+.PHONY : apps/sudoku-api/CMakeFiles/sudoku_api.dir/rule
+
+# Convenience name for target.
+sudoku_api: apps/sudoku-api/CMakeFiles/sudoku_api.dir/rule
+.PHONY : sudoku_api
+
+# codegen rule for target.
+apps/sudoku-api/CMakeFiles/sudoku_api.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f apps\sudoku-api\CMakeFiles\sudoku_api.dir\build.make apps/sudoku-api/CMakeFiles/sudoku_api.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\siddh\sudoku-project\build\CMakeFiles --progress-num=3,4 "Finished codegen for target sudoku_api"
+.PHONY : apps/sudoku-api/CMakeFiles/sudoku_api.dir/codegen
+
+# clean rule for target.
+apps/sudoku-api/CMakeFiles/sudoku_api.dir/clean:
+	$(MAKE) $(MAKESILENT) -f apps\sudoku-api\CMakeFiles\sudoku_api.dir\build.make apps/sudoku-api/CMakeFiles/sudoku_api.dir/clean
+.PHONY : apps/sudoku-api/CMakeFiles/sudoku_api.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

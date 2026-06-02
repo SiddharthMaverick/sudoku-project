@@ -151,6 +151,19 @@ sudoku/fast:
 	$(MAKE) $(MAKESILENT) -f apps\sudoku-cli\CMakeFiles\sudoku.dir\build.make apps/sudoku-cli/CMakeFiles/sudoku.dir/build
 .PHONY : sudoku/fast
 
+#=============================================================================
+# Target rules for targets named sudoku_api
+
+# Build rule for target.
+sudoku_api: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 sudoku_api
+.PHONY : sudoku_api
+
+# fast build rule for target.
+sudoku_api/fast:
+	$(MAKE) $(MAKESILENT) -f apps\sudoku-api\CMakeFiles\sudoku_api.dir\build.make apps/sudoku-api/CMakeFiles/sudoku_api.dir/build
+.PHONY : sudoku_api/fast
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -161,6 +174,7 @@ help:
 	@echo ... rebuild_cache
 	@echo ... test
 	@echo ... sudoku
+	@echo ... sudoku_api
 	@echo ... sudoku_engine
 .PHONY : help
 
