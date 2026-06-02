@@ -1,7 +1,11 @@
-C:/Users/siddh/sudoku-project/build/CMakeFiles/sudoku_engine.dir
-C:/Users/siddh/sudoku-project/build/CMakeFiles/sudoku.dir
-C:/Users/siddh/sudoku-project/build/CMakeFiles/sudoku_tests.dir
-C:/Users/siddh/sudoku-project/build/CMakeFiles/board_tests.dir
 C:/Users/siddh/sudoku-project/build/CMakeFiles/test.dir
 C:/Users/siddh/sudoku-project/build/CMakeFiles/edit_cache.dir
 C:/Users/siddh/sudoku-project/build/CMakeFiles/rebuild_cache.dir
+C:/Users/siddh/sudoku-project/build/engine/CMakeFiles/sudoku_engine.dir
+C:/Users/siddh/sudoku-project/build/engine/CMakeFiles/test.dir
+C:/Users/siddh/sudoku-project/build/engine/CMakeFiles/edit_cache.dir
+C:/Users/siddh/sudoku-project/build/engine/CMakeFiles/rebuild_cache.dir
+C:/Users/siddh/sudoku-project/build/apps/sudoku-cli/CMakeFiles/sudoku.dir
+C:/Users/siddh/sudoku-project/build/apps/sudoku-cli/CMakeFiles/test.dir
+C:/Users/siddh/sudoku-project/build/apps/sudoku-cli/CMakeFiles/edit_cache.dir
+C:/Users/siddh/sudoku-project/build/apps/sudoku-cli/CMakeFiles/rebuild_cache.dir

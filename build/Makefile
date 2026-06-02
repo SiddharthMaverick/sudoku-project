@@ -135,7 +135,7 @@ sudoku_engine: cmake_check_build_system
 
 # fast build rule for target.
 sudoku_engine/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku_engine.dir\build.make CMakeFiles/sudoku_engine.dir/build
+	$(MAKE) $(MAKESILENT) -f engine\CMakeFiles\sudoku_engine.dir\build.make engine/CMakeFiles/sudoku_engine.dir/build
 .PHONY : sudoku_engine/fast
 
 #=============================================================================
@@ -148,154 +148,8 @@ sudoku: cmake_check_build_system
 
 # fast build rule for target.
 sudoku/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku.dir\build.make CMakeFiles/sudoku.dir/build
+	$(MAKE) $(MAKESILENT) -f apps\sudoku-cli\CMakeFiles\sudoku.dir\build.make apps/sudoku-cli/CMakeFiles/sudoku.dir/build
 .PHONY : sudoku/fast
-
-#=============================================================================
-# Target rules for targets named sudoku_tests
-
-# Build rule for target.
-sudoku_tests: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 sudoku_tests
-.PHONY : sudoku_tests
-
-# fast build rule for target.
-sudoku_tests/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku_tests.dir\build.make CMakeFiles/sudoku_tests.dir/build
-.PHONY : sudoku_tests/fast
-
-#=============================================================================
-# Target rules for targets named board_tests
-
-# Build rule for target.
-board_tests: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 board_tests
-.PHONY : board_tests
-
-# fast build rule for target.
-board_tests/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\board_tests.dir\build.make CMakeFiles/board_tests.dir/build
-.PHONY : board_tests/fast
-
-src/SudokuBoard.obj: src/SudokuBoard.cpp.obj
-.PHONY : src/SudokuBoard.obj
-
-# target to build an object file
-src/SudokuBoard.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku_engine.dir\build.make CMakeFiles/sudoku_engine.dir/src/SudokuBoard.cpp.obj
-.PHONY : src/SudokuBoard.cpp.obj
-
-src/SudokuBoard.i: src/SudokuBoard.cpp.i
-.PHONY : src/SudokuBoard.i
-
-# target to preprocess a source file
-src/SudokuBoard.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku_engine.dir\build.make CMakeFiles/sudoku_engine.dir/src/SudokuBoard.cpp.i
-.PHONY : src/SudokuBoard.cpp.i
-
-src/SudokuBoard.s: src/SudokuBoard.cpp.s
-.PHONY : src/SudokuBoard.s
-
-# target to generate assembly for a file
-src/SudokuBoard.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku_engine.dir\build.make CMakeFiles/sudoku_engine.dir/src/SudokuBoard.cpp.s
-.PHONY : src/SudokuBoard.cpp.s
-
-src/SudokuSolver.obj: src/SudokuSolver.cpp.obj
-.PHONY : src/SudokuSolver.obj
-
-# target to build an object file
-src/SudokuSolver.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku_engine.dir\build.make CMakeFiles/sudoku_engine.dir/src/SudokuSolver.cpp.obj
-.PHONY : src/SudokuSolver.cpp.obj
-
-src/SudokuSolver.i: src/SudokuSolver.cpp.i
-.PHONY : src/SudokuSolver.i
-
-# target to preprocess a source file
-src/SudokuSolver.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku_engine.dir\build.make CMakeFiles/sudoku_engine.dir/src/SudokuSolver.cpp.i
-.PHONY : src/SudokuSolver.cpp.i
-
-src/SudokuSolver.s: src/SudokuSolver.cpp.s
-.PHONY : src/SudokuSolver.s
-
-# target to generate assembly for a file
-src/SudokuSolver.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku_engine.dir\build.make CMakeFiles/sudoku_engine.dir/src/SudokuSolver.cpp.s
-.PHONY : src/SudokuSolver.cpp.s
-
-src/main.obj: src/main.cpp.obj
-.PHONY : src/main.obj
-
-# target to build an object file
-src/main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku.dir\build.make CMakeFiles/sudoku.dir/src/main.cpp.obj
-.PHONY : src/main.cpp.obj
-
-src/main.i: src/main.cpp.i
-.PHONY : src/main.i
-
-# target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku.dir\build.make CMakeFiles/sudoku.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
-
-src/main.s: src/main.cpp.s
-.PHONY : src/main.s
-
-# target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku.dir\build.make CMakeFiles/sudoku.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
-
-tests/test_board.obj: tests/test_board.cpp.obj
-.PHONY : tests/test_board.obj
-
-# target to build an object file
-tests/test_board.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\board_tests.dir\build.make CMakeFiles/board_tests.dir/tests/test_board.cpp.obj
-.PHONY : tests/test_board.cpp.obj
-
-tests/test_board.i: tests/test_board.cpp.i
-.PHONY : tests/test_board.i
-
-# target to preprocess a source file
-tests/test_board.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\board_tests.dir\build.make CMakeFiles/board_tests.dir/tests/test_board.cpp.i
-.PHONY : tests/test_board.cpp.i
-
-tests/test_board.s: tests/test_board.cpp.s
-.PHONY : tests/test_board.s
-
-# target to generate assembly for a file
-tests/test_board.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\board_tests.dir\build.make CMakeFiles/board_tests.dir/tests/test_board.cpp.s
-.PHONY : tests/test_board.cpp.s
-
-tests/test_solver.obj: tests/test_solver.cpp.obj
-.PHONY : tests/test_solver.obj
-
-# target to build an object file
-tests/test_solver.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku_tests.dir\build.make CMakeFiles/sudoku_tests.dir/tests/test_solver.cpp.obj
-.PHONY : tests/test_solver.cpp.obj
-
-tests/test_solver.i: tests/test_solver.cpp.i
-.PHONY : tests/test_solver.i
-
-# target to preprocess a source file
-tests/test_solver.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku_tests.dir\build.make CMakeFiles/sudoku_tests.dir/tests/test_solver.cpp.i
-.PHONY : tests/test_solver.cpp.i
-
-tests/test_solver.s: tests/test_solver.cpp.s
-.PHONY : tests/test_solver.s
-
-# target to generate assembly for a file
-tests/test_solver.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku_tests.dir\build.make CMakeFiles/sudoku_tests.dir/tests/test_solver.cpp.s
-.PHONY : tests/test_solver.cpp.s
 
 # Help Target
 help:
@@ -306,25 +160,8 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... test
-	@echo ... board_tests
 	@echo ... sudoku
 	@echo ... sudoku_engine
-	@echo ... sudoku_tests
-	@echo ... src/SudokuBoard.obj
-	@echo ... src/SudokuBoard.i
-	@echo ... src/SudokuBoard.s
-	@echo ... src/SudokuSolver.obj
-	@echo ... src/SudokuSolver.i
-	@echo ... src/SudokuSolver.s
-	@echo ... src/main.obj
-	@echo ... src/main.i
-	@echo ... src/main.s
-	@echo ... tests/test_board.obj
-	@echo ... tests/test_board.i
-	@echo ... tests/test_board.s
-	@echo ... tests/test_solver.obj
-	@echo ... tests/test_solver.i
-	@echo ... tests/test_solver.s
 .PHONY : help
 
 

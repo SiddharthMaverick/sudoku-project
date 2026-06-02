@@ -1,6 +1,9 @@
 #include<iostream>
 #include "SudokuBoard.hpp"
 #include <stdexcept>
+#include <fstream>
+#include <stdexcept>
+#include <string>
 
 SudokuBoard::SudokuBoard()
 {
@@ -92,4 +95,39 @@ void SudokuBoard::setCell(
     board[row][col] = value;
 }
 
+bool SudokuBoard::loadFromFile(const std::string& filename)
+{
+    std::ifstream file(filename);
 
+    if(!file.is_open())
+    {
+        throw std::runtime_error("Cannot open file");
+    }
+
+    std::string line;
+
+    for(int i = 0; i < 9; i++)
+    {
+        if(!(file >> line))
+        {
+            throw std::runtime_error("Invalid file format");
+        }
+
+        if(line.size() != 9)
+        {
+            throw std::runtime_error("Each line must have 9 digits");
+        }
+
+        for(int j = 0; j < 9; j++)
+        {
+            if(line[j] < '0' || line[j] > '9')
+            {
+                throw std::runtime_error("Invalid character in puzzle");
+            }
+
+            board[i][j] = line[j] - '0';
+        }
+    }
+
+    return true;
+}
