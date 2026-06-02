@@ -28,7 +28,7 @@ Running the entire stack is as simple as a single command. Docker will automatic
 
 1. Clone the repository:
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/SiddharthMaverick/sudoku-project.git
    cd sudoku-project
    ```
 
