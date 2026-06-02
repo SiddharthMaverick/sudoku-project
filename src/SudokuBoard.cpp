@@ -34,7 +34,16 @@ SudokuBoard::SudokuBoard(int initialBoard[9][9])
         }
     }
 }
-
+void SudokuBoard::loadBoard(int newBoard[9][9])
+{
+    for(int i = 0; i < 9; i++)
+    {
+        for(int j = 0; j < 9; j++)
+        {
+            board[i][j] = newBoard[i][j];
+        }
+    }
+}
 void SudokuBoard::printBoard()
 {
     for(int row = 0; row < 9; row++)
@@ -55,6 +64,14 @@ int SudokuBoard::getCell(int row, int col)
 
 void SudokuBoard::setCell(int row, int col, int value)
 {
+    if(row < 0 || row >= 9)
+    {
+        throw std::out_of_range("Invalid row");
+    }
+    if(col < 0 || col >= 9)
+    {
+        throw std::out_of_range("Invalid column");
+    }
     board[row][col] = value;
 }
 

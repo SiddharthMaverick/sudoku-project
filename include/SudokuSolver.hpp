@@ -2,13 +2,18 @@
 #define SUDOKU_SOLVER_HPP
 
 #include "SudokuBoard.hpp"
+#include "SolverStats.hpp"
 
 class SudokuSolver
 {
 public:
     bool solve(SudokuBoard& board);
 
+    SolverStats getStats() const;
+
 private:
+    SolverStats stats;
+
     bool findEmptyCell(
         SudokuBoard& board,
         int& row,

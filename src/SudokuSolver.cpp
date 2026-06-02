@@ -19,8 +19,13 @@ bool SudokuSolver::findEmptyCell(
     return false;
 }
 
-bool SudokuSolver::isValid(SudokuBoard& board,int row,int col,int num)
+bool SudokuSolver::isValid(
+    SudokuBoard& board,
+    int row,
+    int col,
+    int num)
 {
+    // Check row
     for(int x = 0; x < 9; x++)
     {
         if(board.getCell(row, x) == num)
@@ -29,6 +34,7 @@ bool SudokuSolver::isValid(SudokuBoard& board,int row,int col,int num)
         }
     }
 
+    // Check column
     for(int x = 0; x < 9; x++)
     {
         if(board.getCell(x, col) == num)
@@ -37,14 +43,16 @@ bool SudokuSolver::isValid(SudokuBoard& board,int row,int col,int num)
         }
     }
 
-    int startRow = row - row % 3;
-    int startCol = col - col % 3;
+    // Check 3x3 box
+    int startRow = row - (row % 3);
+    int startCol = col - (col % 3);
 
     for(int i = 0; i < 3; i++)
     {
         for(int j = 0; j < 3; j++)
         {
-            if(board.getCell(startRow + i,startCol + j) == num)
+            if(board.getCell(startRow + i,
+                             startCol + j) == num)
             {
                 return false;
             }
@@ -54,9 +62,10 @@ bool SudokuSolver::isValid(SudokuBoard& board,int row,int col,int num)
     return true;
 }
 
-
 bool SudokuSolver::solve(SudokuBoard& board)
 {
+    stats.recursiveCalls++;
+
     int row;
     int col;
 
@@ -71,10 +80,14 @@ bool SudokuSolver::solve(SudokuBoard& board)
         {
             board.setCell(row, col, num);
 
+            stats.placements++;
+
             if(solve(board))
             {
                 return true;
             }
+
+            stats.backtracks++;
 
             board.setCell(row, col, 0);
         }
@@ -83,3 +96,7 @@ bool SudokuSolver::solve(SudokuBoard& board)
     return false;
 }
 
+SolverStats SudokuSolver::getStats() const
+{
+    return stats;
+}
