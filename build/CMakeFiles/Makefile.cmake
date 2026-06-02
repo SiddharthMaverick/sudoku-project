@@ -62,4 +62,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/sudoku_engine.dir/DependInfo.cmake"
   "CMakeFiles/sudoku.dir/DependInfo.cmake"
   "CMakeFiles/sudoku_tests.dir/DependInfo.cmake"
+  "CMakeFiles/board_tests.dir/DependInfo.cmake"
   )

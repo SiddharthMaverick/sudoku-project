@@ -1,21 +1,18 @@
 #ifndef SUDOKU_BOARD_HPP
 #define SUDOKU_BOARD_HPP
 #include <array>
+using Grid = std::array<std::array<int, 9>, 9>;
 class SudokuBoard
 {
 private:
-    
-
-    using Grid = std::array<std::array<int, 9>, 9>;
-
     Grid board;
 
 public:
     SudokuBoard();
-    SudokuBoard(int initialBoard[9][9]);
+    SudokuBoard(const Grid& initialBoard);
     void printBoard();
-    void loadBoard(int newBoard[9][9]);
-
+    void loadBoard(const Grid& newBoard);
+    const Grid& getGrid() const;
     int getCell(int row, int col);
 
     void setCell(int row, int col, int value);

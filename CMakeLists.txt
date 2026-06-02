@@ -48,3 +48,19 @@ add_test(
     NAME SudokuSolverTest
     COMMAND sudoku_tests
 )
+
+add_executable(
+    board_tests
+    tests/test_board.cpp
+)
+
+target_link_libraries(
+    board_tests
+    PRIVATE
+    sudoku_engine
+)
+
+add_test(
+    NAME BoardBoundsTest
+    COMMAND board_tests
+)

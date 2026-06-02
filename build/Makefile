@@ -164,6 +164,19 @@ sudoku_tests/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku_tests.dir\build.make CMakeFiles/sudoku_tests.dir/build
 .PHONY : sudoku_tests/fast
 
+#=============================================================================
+# Target rules for targets named board_tests
+
+# Build rule for target.
+board_tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 board_tests
+.PHONY : board_tests
+
+# fast build rule for target.
+board_tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\board_tests.dir\build.make CMakeFiles/board_tests.dir/build
+.PHONY : board_tests/fast
+
 src/SudokuBoard.obj: src/SudokuBoard.cpp.obj
 .PHONY : src/SudokuBoard.obj
 
@@ -236,6 +249,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku.dir\build.make CMakeFiles/sudoku.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+tests/test_board.obj: tests/test_board.cpp.obj
+.PHONY : tests/test_board.obj
+
+# target to build an object file
+tests/test_board.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\board_tests.dir\build.make CMakeFiles/board_tests.dir/tests/test_board.cpp.obj
+.PHONY : tests/test_board.cpp.obj
+
+tests/test_board.i: tests/test_board.cpp.i
+.PHONY : tests/test_board.i
+
+# target to preprocess a source file
+tests/test_board.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\board_tests.dir\build.make CMakeFiles/board_tests.dir/tests/test_board.cpp.i
+.PHONY : tests/test_board.cpp.i
+
+tests/test_board.s: tests/test_board.cpp.s
+.PHONY : tests/test_board.s
+
+# target to generate assembly for a file
+tests/test_board.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\board_tests.dir\build.make CMakeFiles/board_tests.dir/tests/test_board.cpp.s
+.PHONY : tests/test_board.cpp.s
+
 tests/test_solver.obj: tests/test_solver.cpp.obj
 .PHONY : tests/test_solver.obj
 
@@ -269,6 +306,7 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... test
+	@echo ... board_tests
 	@echo ... sudoku
 	@echo ... sudoku_engine
 	@echo ... sudoku_tests
@@ -281,6 +319,9 @@ help:
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... tests/test_board.obj
+	@echo ... tests/test_board.i
+	@echo ... tests/test_board.s
 	@echo ... tests/test_solver.obj
 	@echo ... tests/test_solver.i
 	@echo ... tests/test_solver.s
