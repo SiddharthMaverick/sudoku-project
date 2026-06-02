@@ -62,11 +62,15 @@ CMAKE_BINARY_DIR = C:\Users\siddh\sudoku-project\build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/sudoku_engine.dir/all
 all: CMakeFiles/sudoku.dir/all
+all: CMakeFiles/sudoku_tests.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
+codegen: CMakeFiles/sudoku_engine.dir/codegen
 codegen: CMakeFiles/sudoku.dir/codegen
+codegen: CMakeFiles/sudoku_tests.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -74,22 +78,56 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/sudoku_engine.dir/clean
 clean: CMakeFiles/sudoku.dir/clean
+clean: CMakeFiles/sudoku_tests.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/sudoku_engine.dir
+
+# All Build rule for target.
+CMakeFiles/sudoku_engine.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku_engine.dir\build.make CMakeFiles/sudoku_engine.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku_engine.dir\build.make CMakeFiles/sudoku_engine.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\siddh\sudoku-project\build\CMakeFiles --progress-num=3,4,5 "Built target sudoku_engine"
+.PHONY : CMakeFiles/sudoku_engine.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/sudoku_engine.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\siddh\sudoku-project\build\CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/sudoku_engine.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\siddh\sudoku-project\build\CMakeFiles 0
+.PHONY : CMakeFiles/sudoku_engine.dir/rule
+
+# Convenience name for target.
+sudoku_engine: CMakeFiles/sudoku_engine.dir/rule
+.PHONY : sudoku_engine
+
+# codegen rule for target.
+CMakeFiles/sudoku_engine.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku_engine.dir\build.make CMakeFiles/sudoku_engine.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\siddh\sudoku-project\build\CMakeFiles --progress-num=3,4,5 "Finished codegen for target sudoku_engine"
+.PHONY : CMakeFiles/sudoku_engine.dir/codegen
+
+# clean rule for target.
+CMakeFiles/sudoku_engine.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku_engine.dir\build.make CMakeFiles/sudoku_engine.dir/clean
+.PHONY : CMakeFiles/sudoku_engine.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/sudoku.dir
 
 # All Build rule for target.
-CMakeFiles/sudoku.dir/all:
+CMakeFiles/sudoku.dir/all: CMakeFiles/sudoku_engine.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku.dir\build.make CMakeFiles/sudoku.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku.dir\build.make CMakeFiles/sudoku.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\siddh\sudoku-project\build\CMakeFiles --progress-num=1,2,3,4 "Built target sudoku"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\siddh\sudoku-project\build\CMakeFiles --progress-num=1,2 "Built target sudoku"
 .PHONY : CMakeFiles/sudoku.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sudoku.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\siddh\sudoku-project\build\CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\siddh\sudoku-project\build\CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/sudoku.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\siddh\sudoku-project\build\CMakeFiles 0
 .PHONY : CMakeFiles/sudoku.dir/rule
@@ -101,13 +139,45 @@ sudoku: CMakeFiles/sudoku.dir/rule
 # codegen rule for target.
 CMakeFiles/sudoku.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku.dir\build.make CMakeFiles/sudoku.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\siddh\sudoku-project\build\CMakeFiles --progress-num=1,2,3,4 "Finished codegen for target sudoku"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\siddh\sudoku-project\build\CMakeFiles --progress-num=1,2 "Finished codegen for target sudoku"
 .PHONY : CMakeFiles/sudoku.dir/codegen
 
 # clean rule for target.
 CMakeFiles/sudoku.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku.dir\build.make CMakeFiles/sudoku.dir/clean
 .PHONY : CMakeFiles/sudoku.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/sudoku_tests.dir
+
+# All Build rule for target.
+CMakeFiles/sudoku_tests.dir/all: CMakeFiles/sudoku_engine.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku_tests.dir\build.make CMakeFiles/sudoku_tests.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku_tests.dir\build.make CMakeFiles/sudoku_tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\siddh\sudoku-project\build\CMakeFiles --progress-num=6,7 "Built target sudoku_tests"
+.PHONY : CMakeFiles/sudoku_tests.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/sudoku_tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\siddh\sudoku-project\build\CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/sudoku_tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\siddh\sudoku-project\build\CMakeFiles 0
+.PHONY : CMakeFiles/sudoku_tests.dir/rule
+
+# Convenience name for target.
+sudoku_tests: CMakeFiles/sudoku_tests.dir/rule
+.PHONY : sudoku_tests
+
+# codegen rule for target.
+CMakeFiles/sudoku_tests.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku_tests.dir\build.make CMakeFiles/sudoku_tests.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\siddh\sudoku-project\build\CMakeFiles --progress-num=6,7 "Finished codegen for target sudoku_tests"
+.PHONY : CMakeFiles/sudoku_tests.dir/codegen
+
+# clean rule for target.
+CMakeFiles/sudoku_tests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\sudoku_tests.dir\build.make CMakeFiles/sudoku_tests.dir/clean
+.PHONY : CMakeFiles/sudoku_tests.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

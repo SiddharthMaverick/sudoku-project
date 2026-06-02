@@ -1,5 +1,5 @@
 #include<iostream>
-#include "../include/SudokuBoard.hpp"
+#include "SudokuBoard.hpp"
 
 SudokuBoard::SudokuBoard()
 {
@@ -16,6 +16,16 @@ SudokuBoard::SudokuBoard()
         {0,0,0,0,8,0,0,7,9}
     };
 
+    for(int i = 0; i < 9; i++)
+    {
+        for(int j = 0; j < 9; j++)
+        {
+            board[i][j] = initialBoard[i][j];
+        }
+    }
+}
+SudokuBoard::SudokuBoard(int initialBoard[9][9])
+{
     for(int i = 0; i < 9; i++)
     {
         for(int j = 0; j < 9; j++)

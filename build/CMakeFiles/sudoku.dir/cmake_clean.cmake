@@ -1,8 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/sudoku.dir/src/SudokuBoard.cpp.obj"
-  "CMakeFiles/sudoku.dir/src/SudokuBoard.cpp.obj.d"
-  "CMakeFiles/sudoku.dir/src/SudokuSolver.cpp.obj"
-  "CMakeFiles/sudoku.dir/src/SudokuSolver.cpp.obj.d"
   "CMakeFiles/sudoku.dir/src/main.cpp.obj"
   "CMakeFiles/sudoku.dir/src/main.cpp.obj.d"
   "libsudoku.dll.a"

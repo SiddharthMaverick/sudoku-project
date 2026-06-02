@@ -1,4 +1,4 @@
-#include "../include/SudokuSolver.hpp"
+#include "SudokuSolver.hpp"
 
 bool SudokuSolver::findEmptyCell(
     SudokuBoard& board,
@@ -19,11 +19,7 @@ bool SudokuSolver::findEmptyCell(
     return false;
 }
 
-bool SudokuSolver::isValid(
-    SudokuBoard& board,
-    int row,
-    int col,
-    int num)
+bool SudokuSolver::isValid(SudokuBoard& board,int row,int col,int num)
 {
     for(int x = 0; x < 9; x++)
     {
@@ -48,8 +44,7 @@ bool SudokuSolver::isValid(
     {
         for(int j = 0; j < 3; j++)
         {
-            if(board.getCell(startRow + i,
-                             startCol + j) == num)
+            if(board.getCell(startRow + i,startCol + j) == num)
             {
                 return false;
             }

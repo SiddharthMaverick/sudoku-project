@@ -8,7 +8,7 @@ private:
 
 public:
     SudokuBoard();
-
+    SudokuBoard(int initialBoard[9][9]);
     void printBoard();
 
     int getCell(int row, int col);

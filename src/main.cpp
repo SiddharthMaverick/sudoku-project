@@ -1,7 +1,7 @@
 #include <iostream>
 
-#include "../include/SudokuBoard.hpp"
-#include "../include/SudokuSolver.hpp"
+#include "SudokuBoard.hpp"
+#include "SudokuSolver.hpp"
 
 int main()
 {

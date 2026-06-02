@@ -100,6 +100,6 @@ CMakeFiles/sudoku.dir/src/main.cpp.obj: \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\ostream.tcc \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\istream \
  c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\istream.tcc \
- c:\users\siddh\sudoku-project\include\sudokuboard.hpp \
- c:\users\siddh\sudoku-project\include\sudokusolver.hpp \
- c:\users\siddh\sudoku-project\include\SudokuBoard.hpp
+ C:/Users/siddh/sudoku-project/include/SudokuBoard.hpp \
+ C:/Users/siddh/sudoku-project/include/SudokuSolver.hpp \
+ C:/Users/siddh/sudoku-project/include/SudokuBoard.hpp
